@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    var contador = 0
+    function contagem()
+    {
+        contador+=1
+        document.getElementById("resultado").innerHTML = contador
+    }
+
+    function zerar()
+    {
+        contador = 0
+        document.getElementById("resultado").innerHTML = contador
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="contagem()">+1</button>
+    <button onclick="zerar()">Zerar</button>
+    <div id="resultado">Aqui ficará o resultado</div>
+</body>
+</html> 
+
+
+
+
+<!-- Prompts para o ChatGPT: -->
+
+<!-- 1°: Olá preciso de ajuda em um código básico HTML -->
+<!-- 2°: O projeto consiste em um botão de adicionar no qual toda vez em que é apertado acrescenta mais 1, e outro no qual zera o resultado,
+     o botão de adicionar esta funcionando, porém, quando pressionado o botão de apagar,
+     momentaneamente ele apaga, porém, quando apertado novamente no de somar, ele soma mais 1 em relação ao anterior, antes de zerar, o código esta assim: -->
+<!-- 3°: já removi a variável e continua não funcionando, vou te enviar o código, verifique o que há de errado -->
+
+
+<!-- Add: o motivo do erro foi porque estava declarando uma nova varíavel dentro da função zerar()
+        function zerar()
+    {
+        var contador = 0
+        document.getElementById("resultado").innerHTML = contador
+    } 
+    Estava criando uma nova variável "contador" ao invés de apenas atribuir a ela o valor-->
