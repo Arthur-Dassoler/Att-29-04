@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+function processamento()
+{
+    const nome = document.getElementById("nome").value.trim()
+    const senha = document.getElementById("senha").value.trim()
+    if (nome !== "Arthur")
+    {
+        alert("Nome incorreto!")
+        return
+    }
+    if (senha !== "123")
+    {
+        alert("Senha incorreta!")
+        return
+    }
+    document.getElementById("nomecadastrado").innerHTML = nome
+    document.getElementById("senhacadastrada").innerHTML = senha + " Login realizado com sucesso!"
+}
+</script>
+</head>
+<body>
+    <input id="nome" type="text" placeholder="Insira seu nome de usuário">
+    <input id="senha" type="text" placeholder="Insira sua senha">
+    <div id="nomecadastrado"></div>
+    <div id="senhacadastrada"></div>
+    <button id="botaocadastro" onclick="processamento()">Entrar</button>
+</body>
+</html>
+
+
+
+
+
+<!-- Prompts do ChatGPT -->
+<!-- 1°: Estou criando um código básico de login em HTML, por enquanto esta assim: "codigo" A parte onde ele verifica se os campos estão vazios e retorna ao usuário está funcionando,
+     porém, se o usuário digitar a senha e usuário corretos ou apenas 1 delas, o código não funciona -->       
+
+
+<!-- Add: após o 1° prompt o chat me disse que faltava fechar um "if" com }, o que estava dando um baita erro de precedencia -  ->
